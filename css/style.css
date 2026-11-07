@@ -1,0 +1,282 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #081b15;
+    --green: #123e2d;
+    --gold: #d6ad55;
+    --white: #f5f1e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Cairo', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #ffffff18;
+}
+
+header h2 {
+    color: var(--gold);
+    font-size: 28px;
+}
+
+header h2 span {
+    font-size: 17px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+button {
+    background: var(--gold);
+    color: #081b15;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #f0ca77;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    font-size: 19px;
+    color: #c5cec8;
+    line-height: 2;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+
+/* صفحة تسجيل الدخول */
+
+.back-home {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.login-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.login-card {
+    background: #102b20;
+    border: 1px solid #d6ad5540;
+    border-radius: 18px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 15px 45px #0005;
+}
+
+.login-card h1 {
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-card > p {
+    text-align: center;
+    color: #c5cec8;
+    margin-bottom: 30px;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-card label {
+    color: white;
+}
+
+.login-card input {
+    padding: 14px;
+    border: 1px solid #ffffff25;
+    border-radius: 8px;
+    background: #081b15;
+    color: white;
+    font-family: inherit;
+    outline: none;
+}
+
+.login-card input:focus {
+    border-color: var(--gold);
+}
+
+.login-card button {
+    margin-top: 15px;
+}
+
+.login-card .login-note {
+    margin-top: 25px;
+    margin-bottom: 0;
+    color: var(--gold);
+}
+
+
+/* أزرار التنقل */
+
+.nav-button,
+.main-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.main-button:hover {
+    background: #f0ca77;
+    transform: translateY(-3px);
+}
+
+.main-button {
+    margin-top: 10px;
+}
+
+/* قسم عن المشروع */
+
+.about {
+    padding: 70px 20px;
+    text-align: center;
+    background: var(--green);
+}
+
+.about h2 {
+    color: var(--gold);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: var(--white);
+    font-size: 18px;
+    line-height: 2;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    header h2 {
+        font-size: 25px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 25px 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about {
+        padding: 45px 20px;
+    }
+
+    .about h2 {
+        font-size: 26px;
+    }
+
+    .login-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .nav-button {
+        padding: 9px 20px;
+    }
+}
